@@ -8,10 +8,25 @@ namespace JAMK.IT
   {
     static void Main()
     {
+            Console.WriteLine("Lotto (1) vai Blackjack (2)");
+            string valinta = Console.ReadLine();
 
-           
-          
-          string theirNumber = "";
+            if (valinta == "1")
+            {
+                Lotto.Lottoa();
+            }
+            else if (valinta == "2")
+            {
+                PlayBlackJack();
+            }
+            else
+            {
+                Console.WriteLine("No ei pelata");
+            }
+    }
+        static void PlayBlackJack()
+        {
+            string theirNumber = "";
             int temp;
             while (true)
             {
@@ -50,6 +65,6 @@ namespace JAMK.IT
                     System.Console.WriteLine("You lose. Play again.");
                 }
             }
-    }
+        }
   }
 }
